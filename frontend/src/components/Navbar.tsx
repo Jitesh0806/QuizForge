@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-ink border-b border-cream/10 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 h-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/dashboard" className="font-display text-xl text-amber-quiz">
           QuizForge
