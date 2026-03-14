@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Source Serif 4', serif;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #f5f0e8;
+    color: #0f0e0c;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink text-cream px-6 py-3 font-display text-sm tracking-wide
+           border-2 border-ink hover:bg-amber-quiz hover:border-amber-quiz
+           hover:text-ink transition-all duration-200 cursor-pointer
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-ink px-6 py-3 font-display text-sm tracking-wide
+           border-2 border-ink hover:bg-ink hover:text-cream
+           transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-ink/60 px-4 py-2 text-sm
+           hover:text-ink transition-colors duration-150 cursor-pointer;
+  }
+
+  .card {
+    @apply bg-cream border border-cream-dark p-6 shadow-sm;
+  }
+
+  .input-field {
+    @apply w-full bg-cream border-2 border-cream-dark px-4 py-3
+           font-body text-sm text-ink placeholder:text-ink/40
+           focus:outline-none focus:border-ink transition-colors duration-200;
+  }
+
+  .label {
+    @apply block font-display text-xs tracking-widest uppercase text-ink/60 mb-2;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-display tracking-wide uppercase;
+  }
+
+  .badge-easy   { @apply bg-green-100 text-green-800; }
+  .badge-medium { @apply bg-amber-100 text-amber-800; }
+  .badge-hard   { @apply bg-red-100 text-red-800; }
+
+  .section-title {
+    @apply font-display text-3xl text-ink tracking-tight;
+  }
+
+  .divider {
+    @apply border-t border-cream-dark my-6;
+  }
+}
+
+/* Staggered fade-up for lists */
+.stagger > * {
+  opacity: 0;
+  animation: fadeUp 0.4s ease forwards;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger > *:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 3px;
+  background: #e8a030;
+  transition: width 0.4s ease;
+}
+
+/* Choice button states */
+.choice-btn {
+  @apply w-full text-left px-5 py-4 border-2 border-cream-dark bg-cream
+         hover:border-ink hover:bg-cream-soft transition-all duration-150
+         cursor-pointer font-body text-sm text-ink;
+}
+.choice-btn.selected  { @apply border-ink bg-ink text-cream; }
+.choice-btn.correct   { @apply border-green-600 bg-green-50 text-green-900; }
+.choice-btn.incorrect { @apply border-red-500 bg-red-50 text-red-900; }
+.choice-btn.revealed  { @apply border-green-600 bg-green-50 text-green-900; }
