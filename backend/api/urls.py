@@ -1,9 +1,14 @@
 from django.urls import path
+from django.http import JsonResponse
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from . import views
 
+
+def health(request):
+    return JsonResponse({'status': 'ok'})
 urlpatterns = [
+    path('health/', health),
     # Auth
     path('auth/register/', views.RegisterView.as_view(), name='register'),
     path('auth/login/', TokenObtainPairView.as_view(), name='login'),
@@ -20,7 +25,7 @@ urlpatterns = [
     path('attempts/<int:attempt_id>/', views.AttemptDetailView.as_view(), name='attempt-detail'),
     path('attempts/<int:attempt_id>/answer/', views.SubmitAnswerView.as_view(), name='submit-answer'),
     path('attempts/<int:attempt_id>/complete/', views.CompleteAttemptView.as_view(), name='complete-attempt'),
-
+    
     # Stats
     path('stats/', views.UserStatsView.as_view(), name='user-stats'),
 ]
