@@ -8,8 +8,10 @@ A full-stack quiz application where users generate AI-powered quizzes, take them
 
 ## Live Demo
 
-- **Frontend:** https://your-app.vercel.app
-- **Backend:** https://your-api.railway.app
+## Live Demo
+
+- **Frontend:** https://quiz-forge-eta-bice.vercel.app
+- **Backend:** https://quizforge-production-c85a.up.railway.app
 
 ---
 
