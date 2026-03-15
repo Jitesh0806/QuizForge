@@ -6,7 +6,6 @@ A full-stack quiz application where users generate AI-powered quizzes, take them
 
 ---
 
-## Live Demo
 
 ## Live Demo
 
