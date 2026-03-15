@@ -13,6 +13,16 @@ A full-stack quiz application where users generate AI-powered quizzes, take them
 
 ---
 
+
+## Screenshots
+
+| | |
+|---|---|
+| ![Landing Page](frontend/public/screenshots/Homepage.png) | ![Dashboard](frontend/public/screenshots/Dashboard.png) |
+| ![Create Quiz](frontend/public/screenshots/MyQuiz.png) | ![Results](frontend/public/screenshots/Results.png) |
+
+---
+
 ## Features
 
 - **User auth** — register, login, JWT session management with silent token refresh
