@@ -15,9 +15,9 @@ A full-stack quiz application where users generate AI-powered quizzes, take them
 
 ## Deployment
 
-Deployed Frontend: - https://vercel.com/jitesh0806s-projects/quiz-forge
+Deployed Frontend: - https://quiz-forge-eta-bice.vercel.app
 
-Deployed Backend: - https://railway.com/project/eaf731cf-47e2-46f5-8f8c-fdf2ebb00f1d?
+Deployed Backend: - https://quizforge-production-c85a.up.railway.app/api/health/
 
 ---
 
